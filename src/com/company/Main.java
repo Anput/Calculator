@@ -3,6 +3,8 @@ import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
+cle
+    private int value = 0;
 
     public static void main(String[] args) {
 	// write your code here
@@ -25,31 +27,37 @@ public class Main {
         oper1 = sc.next();
 
         //determine the operand the user entered (i.e. +, -, *, /)
-        if(oper1.equals("*")){
+        if(oper1.equals("*")) {
             int answer = num1 * num2;
             //output the answer
             System.out.println(num1 + oper1 + num2 + "=" + answer);
-        }else
+        }
 
-        if(oper1.equals("+")){
+        else if(oper1.equals("+")) {
             int answer = num1 + num2;
             //output the answer
             System.out.println(num1 + oper1 + num2 + "=" + answer);
-        }else
 
-        if(oper1.equals("-")){
+        }
+
+        else if (oper1.equals("^")) {
+            int answer = num1 ^ num2;;
+            //output answer
+            System.out.println(num1 + oper1 + num2 + "=" + answer);
+        }
+
+        else if(oper1.equals("-")) {
             int answer = num1 - num2;
             //output the answer
             System.out.println(num1 + oper1 + num2 + "=" + answer);
-        }else
 
-        if(oper1.equals("/")){
-            int answer = num1 / num2;
-            //output the answer
-            System.out.println(num1 + oper1 + num2 + "=" + answer);
-        }else{
-            System.out.println("You screwed up!");
         }
 
+        else if(oper1.equals("/") && (num1 != 0) && (num2 != 0)) {
+            int answer = num1 / num2;
+            //output the answer
+                 System.out.println(num1 + oper1 + num2 + "=" + answer);
+            System.out.println("You screwed up!");
+        }
     }
 }
